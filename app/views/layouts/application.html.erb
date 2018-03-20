@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Deliverybroker</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      
+    <%= render 'layouts/navbar' %>
+      <div class="container <%= controller_name %> <%= action_name %> "> <%#  controller_name &/or action_name will give the names of each one of them, this will be used for some refernces later %>
+      <%#= render 'layouts/signedin'%>
+
+  	  
+    <%= yield %>
+      </div>
+  </body>
+</html>

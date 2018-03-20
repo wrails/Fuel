@@ -1,0 +1,40 @@
+/* Passing the screen width */
+
+@media (min-width: 1200px){
+	.container {
+    max-width: 1450px;
+	}
+}
+
+/* <strong> for all app */
+strong {
+	font-size:22px;
+	font-weight: 480;
+}
+
+
+/* for all <a> tags that are NOT links on the page container */
+a {
+    font-size:22px;
+    font-weight: 200;
+	}
+/* for all default buttons */
+.btn {
+	    font-size: 14px;
+}
+
+/* Link sizes inside the table ( Show, Edit & Delete) */
+/* a:-webkit-any-link {
+*font-size: 15px;
+}*/
+
+.btn-danger {
+    color: #fff;
+    background-color: #f13b4d;
+    border-color: #dc3545;
+}
+
+/* separating the radio inputs */
+input[type="radio"]{
+  margin: 0 40px 0 10px;
+}

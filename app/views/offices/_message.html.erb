@@ -1,0 +1,20 @@
+<%# Given the correct message to user depending on: user, number of offices, search and rafius %> 
+<p> 
+  <% if params[:search].present? %>
+      <% if @offices.size <=0 %>
+       <%= "There are no offices within #{params[:radius]} miles  of #{params[:search].capitalize}"%>
+      <% elsif @offices.size == 1 %>
+       <%= "There is an office within #{params[:radius]} mile  of #{params[:search].capitalize}"%>
+      <% else %>
+       <%= "There are #{@offices.size} offices within #{params[:radius]} miles of #{params[:search].capitalize}"%>
+      <% end %>
+  <% else %>
+      <% if @offices.size <=0 %>
+       <%= "You have not created any office yet "%>
+      <% elsif @offices.size == 1 %>
+       <%= "You manage an office "%>
+      <% else %>
+       <%= "You manage #{@offices.size} offices "%>
+      <% end %>
+  <% end %>
+</p>

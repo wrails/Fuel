@@ -1,0 +1,27 @@
+   .navbar {
+        border-radius: 0;
+        margin-bottom: 20px;        
+        background-color: #7df281;
+           
+            .navbar-brand {
+                font-weight: bolder;
+                font-size:17px;
+                .different {
+                    font-weight: 50;
+                    color: #f75656;                
+                }
+            }
+            /* Passing the border wideness for the toggler button  */           
+            .navbar-toggler {
+                border: 1px solid; //this will give the border to the toggle button
+            }
+            
+            .nav-link {
+                  color: primary-color-light !important;
+                  font-size:15px;
+                  font-weight: 400;
+                  &.active {
+                    color: black !important; // Changing the color when the tab/link is active
+                  }
+            }
+}
