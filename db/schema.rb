@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180316173144) do
+ActiveRecord::Schema.define(version: 20180320113558) do
 
   create_table "offices", force: :cascade do |t|
     t.integer "user_id"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20180316173144) do
     t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "distance"
+    t.string "address"
     t.index ["user_id"], name: "index_offices_on_user_id"
   end
 

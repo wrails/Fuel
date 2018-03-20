@@ -1,15 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Office Name:</strong>
-  <%= @office.name %>
-</p>
-
-<p>
-  <strong>Postcode:</strong>
-  <%= @office.postcode %>
-</p>
-
-<%= link_to 'Back', :back %>
-
-
+<div class="card">
+  <h5 class="card-header"><%= @office.name %></h5>
+  <div class="card-body">
+    <h5 class="card-title"><strong>Postcode:</strong> <%= @office.postcode %></h5>
+    <a <%= link_to 'Back to list', :back %></a>
+  </div>
+</div>

@@ -11,6 +11,7 @@ class OfficesController < ApplicationController
     if params[:search].present?
       radius = params[:radius]
       @offices = Office.near(params[:search], radius)
+      puts(@offices.first.distance)
     else
       @offices = current_user.offices.all
     end
@@ -37,8 +38,8 @@ class OfficesController < ApplicationController
 
     respond_to do |format|
       if @office.save
-        format.html { redirect_to @office, notice: 'Office was successfully created.' }
-        format.json { render :show, status: :created, location: @office }
+        format.html { redirect_to offices_path, notice: 'Office was successfully created.' }
+        format.json { render :index, status: :created, location: offices }
       else
         format.html { render :new }
         format.json { render json: @office.errors, status: :unprocessable_entity }
@@ -51,8 +52,8 @@ class OfficesController < ApplicationController
   def update
     respond_to do |format|
       if @office.update(office_params)
-        format.html { redirect_to @office, notice: 'Office was successfully updated.' }
-        format.json { render :show, status: :ok, location: @office }
+        format.html { redirect_to offices_path, notice: 'Office was successfully updated.' }
+        format.json { render :index, status: :ok, location: offices }
       else
         format.html { render :edit }
         format.json { render json: @office.errors, status: :unprocessable_entity }
