@@ -14,7 +14,7 @@
 		<br>
 		<%= form_tag offices_path, method: :get do %>
 		  
-		    <%= text_field_tag :search, params[:search], :required => true, class: "search", placeholder: "Postcode or City"  %> search within 
+		    <%= text_field_tag :search, params[:search], :required => true, class: "search", placeholder: "Full Postcode only"  %> search within 
 		    <%= number_field_tag :radius, params[:radius], min: 0, :required => true, class: "radius", placeholder: "Number of miles" %> miles
 		 
 		    <button class="btn btn-outline-success" type="submit">Search Offices</button>
