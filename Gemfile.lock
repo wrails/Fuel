@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/codyeatworld/bootstrap_form_with.git
+  revision: 061f98cf9b28736d0edc8c88d2fbd56b2d481716
+  specs:
+    bootstrap_form_with (0.1.0)
+      rails (~> 5.1.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -209,6 +216,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap
+  bootstrap_form_with!
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)

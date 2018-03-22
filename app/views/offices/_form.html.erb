@@ -1,31 +1,26 @@
-<%= form_with(model: office, local: true) do |form| %>
-  <% if office.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(office.errors.count, "error") %> prohibited this office from being saved:</h2>
-
-      <ul>
-      <% office.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <br>
-
-  <div class="field">
-    <%= form.label :office_name %>
-    <%= form.text_field :name, id: :office_name %>
-  </div>
-   <br>
-
-  <div class="field">
-    <%= form.label :postcode %>
-    <%= form.text_field :postcode, id: :office_postcode %>
-  </div>
-
-  <br>
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
 <br>
+<br>
+<div class="card" style="width: 350px;">
+  <h4 class="card-header"><%= "Edit Office #{@office.postcode.upcase}" %></h4>
+  <div class="card-body">
+
+    <%= bootstrap_form_with(model: office, local: true) do |form| %>
+    <%= form.error_notification %>
+
+      <%= form.group :office_name do %>
+        <%= form.label :office_name%>
+        <%= form.text_field  :name, id: :office_name %>
+        <%= form.errors :postcode %>
+      <% end %>
+
+      <%= form.group :postcode do %>
+        <%= form.label :postcode %>
+        <%= form.text_field  :postcode, id: :office_postcode %>
+        <%= form.errors :postcode %>
+      <% end %>
+
+      <%= form.submit 'Update Office', class: 'actions btn btn-primary' %>
+    <% end %>
+  </div>
+</div>
+
