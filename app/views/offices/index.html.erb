@@ -3,8 +3,9 @@
 <h1>Offices</h1>
 <br>
 <%= render 'message', office: @office %>
- <% if !user_signed_in? %>
-<%= render 'radioButtons', office: @office %>
+
+<% if !user_signed_in? %>
+  <%= render 'radioButtons', office: @office %>
 <% end %>
 <br>
 <% if user_signed_in? %>

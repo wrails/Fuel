@@ -4,6 +4,11 @@
   <h5 class="card-header"><%= @office.name %></h5>
   <div class="card-body">
     <h5 class="card-title"><strong>Postcode:</strong> <%= @office.postcode %></h5>
+    <h5 class="card-title"><strong>Latitude:</strong>
+        <%= @office.latitude %></h5>
+    <h5 class="card-title"><strong>Longitude:</strong>
+        <%= @office.longitude %></h5>
+	<br>
     <a <%= link_to 'Back to list', :back %></a>
   </div>
 </div>

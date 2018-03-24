@@ -11,7 +11,6 @@ class OfficesController < ApplicationController
     if params[:search].present?
       radius = params[:radius]
       @offices = Office.near(params[:search], radius)
-      puts(@offices.first.distance)
     else
       @offices = current_user.offices.all
     end
