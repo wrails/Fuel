@@ -31,9 +31,7 @@
         <td><%= office.name %></td>
         <td><%= office.postcode %></td>
         <% if !user_signed_in? %>
-
-        <td><%= office.distance.nil? ? "N/A" : office.distance.round(2) %></td>
-
+          <td><%= office.distance.nil? ? "N/A" : office.distance.round(2) %></td>
         <% end %>
 
 

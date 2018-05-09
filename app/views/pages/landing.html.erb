@@ -5,24 +5,25 @@
 	</div>
   	<div class="card-body">
 
-		<h3 class="card-title"> If you are a Delivery Office come along and <%= link_to "Sign Up", new_user_registration_path, :method => 'get'%> in our platform is free!! or <%= link_to "Login", new_user_session_path, :method => 'get'%> if you are already registered</h3>
-		<br>
-		<br>
-		<p class="card-text">Find the closest Delivery Office in miles or kilometers. Complete the two fields below and <b> Click </b> the Search Offices button.
-		That's all </p>
-		<br>
-		<br>
-		<%= form_tag offices_path, method: :get do %>
-		  
-		    <%= text_field_tag :search, params[:search], :required => true, class: "search", placeholder: "Full Postcode only"  %> search within 
-		    <%= number_field_tag :radius, params[:radius], min: 0, :required => true, class: "radius", placeholder: "Number of miles" %> miles
-		 
-		    <button class="btn btn-outline-success" type="submit">Search Offices</button>
-		    <br>
-		    <br>
-		<% end %>
+	<h3 class="card-title"> If you are a Delivery Office come along and <%= link_to "Sign Up", new_user_registration_path, :method => 'get'%> in our platform is free!! or <%= link_to "Login", new_user_session_path, :method => 'get'%> if you are already registered</h3>
+	<br>
+	<br>
+	<p class="card-text">Find the closest Delivery Office in miles or kilometers. Complete the two fields below and <b> Click </b> the Search Offices button.
+	That's all </p>
+	<br>
+	<br>
+	<%= form_tag offices_path, method: :get do %>
+	  
+	    <%= text_field_tag :search, params[:search], :required => true, class: "search", placeholder: "Full Postcode only"  %> search within 
+	    <%= number_field_tag :radius, params[:radius], min: 0, :required => true, class: "radius", placeholder: "Number of miles" %> miles
+	 
+	    <button class="btn btn-outline-success" type="submit">Search Offices</button>
+	    <br>
+	    <br>
+	<% end %>
 
 
-		<a href='' class="btn btn-primary">Clear Search</a>
-		  </p> 
-		</div>
+	<a href='' class="btn btn-primary">Clear Search</a>
+	  </p> 
+	</div>
+</div>
