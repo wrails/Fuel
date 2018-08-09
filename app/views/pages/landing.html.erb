@@ -1,14 +1,55 @@
 
+<div>
+	<p ><h1 class="text-center"> Find your nearest delivery office </h1>
+<br>
+		<h4 class="text-center"> Ask them to come to you and pick up your parcel or you can go and drop it the office</h4>
+		<h4 class="text-center"> They can send you a person or a drone; You choose! </h4>
+	</p>
+</div>
+<br>
+
+
+	<div class="img-fluid">	
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		  <ol class="carousel-indicators">
+		    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		  </ol>
+		  <div class="carousel-inner">
+		    <div class="carousel-item active">
+		      <%= image_tag "top-delivery 1.png", alt: "About", :class => "About_img" %>
+		    </div>
+		    <div class="carousel-item">
+		      <%= image_tag "top-delivery 2.png", alt: "About2", :class => "About_img" %>
+		    </div>
+		    <div class="carousel-item">
+		      <%= image_tag "top-delivery 3.png", alt: "About3", :class => "About_img" %>
+		    </div>
+		  </div>
+		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
+	</div>
+
+<div class="invitation">
+	<h3 > If you are a Delivery Office come along and <%= link_to "Sign Up", new_user_registration_path, :method => 'get', class: "invite-log"%> in our platform is free!! or <%= link_to "Login", new_user_session_path, :method => 'get', class: "invite-log"%> if you are already registered</h3>
+</div>
+	<br>
 <div class="card text-center">
 	<div class="card-header">
 		<h1>Find Delivery Offices </h1>
 	</div>
   	<div class="card-body">
-
-	<h3 class="card-title"> If you are a Delivery Office come along and <%= link_to "Sign Up", new_user_registration_path, :method => 'get'%> in our platform is free!! or <%= link_to "Login", new_user_session_path, :method => 'get'%> if you are already registered</h3>
 	<br>
 	<br>
-	<p class="card-text">Find the closest Delivery Office in miles or kilometers. Complete the two fields below and <b> Click </b> the Search Offices button.
+	<p class="card-text">Find the closest Delivery Office. Complete the two fields below and <b> Click </b> the Search Offices button.
 	That's all </p>
 	<br>
 	<br>
@@ -22,8 +63,8 @@
 	    <br>
 	<% end %>
 
-
 	<a href='' class="btn btn-primary">Clear Search</a>
 	  </p> 
 	</div>
 </div>
+

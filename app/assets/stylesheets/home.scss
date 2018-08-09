@@ -1,3 +1,44 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container-fluid.about {
+    padding-right: 0px !important; 
+    padding-left: 0px !important; 
+}
+.About_img {
+	height:80vh;  
+  	min-height:200px;  
+  	width: 100% 
+ }
+.carousel {
+     margin-bottom: 8%;
+}
+ 
+.card {
+    margin-bottom: 20%;
+}
+.invitation {
+	margin-bottom: 5%;
+}
+a.invite-log {
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+p.card-text {
+    font-size: 1.8rem;
+    line-height: 2;
+    word-spacing: 1.9px;
+}
+/* form {
+    font-size: 1.8rem;
+    line-height: 2;
+    word-spacing: 3.9px;
+}
+
+input#search {
+    font-size: 1.5rem;
+}
+input#radius {
+    font-size: 1.5rem;
+} */
